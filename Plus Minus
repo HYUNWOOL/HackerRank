@@ -1,0 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main(){
+    int n;
+    int cntp=0,cntn=0,cntz=0;
+    cin >> n;
+    vector<int> arr(n);
+    for(int arr_i = 0;arr_i < n;arr_i++){
+       cin >> arr[arr_i];
+        if(arr[arr_i]>0)
+            cntp++;
+        else if(arr[arr_i]==0)
+            cntz++;
+        else
+            cntn++;
+    }
+    cout<<(double)cntp/n<<endl;
+    cout<<(double)cntn/n<<endl;
+    cout<<(double)cntz/n<<endl;
+    return 0;
+}
